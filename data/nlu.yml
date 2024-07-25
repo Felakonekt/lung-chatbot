@@ -1,0 +1,43 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+      - good morning
+      - good evening
+
+  - intent: inform_symptoms
+    examples: |
+      - I have a cough
+      - I'm feeling shortness of breath
+      - I have chest pain
+      - I'm wheezing
+      - I have a fever
+
+  - intent: provide_image
+    examples: |
+      - Here is my chest X-ray
+      - I have uploaded my X-ray
+      - Take a look at my chest X-ray image
+
+  - intent: affirm
+    examples: |
+      - yes
+      - sure
+      - absolutely
+      - indeed
+
+  - intent: deny
+    examples: |
+      - no
+      - not really
+      - nope
+
+  - intent: goodbye
+    examples: |
+      - goodbye
+      - bye
+      - see you later
+      - take care

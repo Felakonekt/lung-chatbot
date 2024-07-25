@@ -1,0 +1,47 @@
+version: "3.1"
+intents:
+  - greet
+  - inform_symptoms
+  - provide_image
+  - affirm
+  - deny
+  - goodbye
+
+entities:
+  - symptom
+  - image
+
+slots:
+  symptom:
+    type: text
+    mappings:
+      - type: from_text
+        entity: symptom
+  image:
+    type: text
+    mappings:
+      - type: from_text
+        entity: image
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today with your lung health?"
+
+  utter_ask_symptoms:
+    - text: "Can you describe your symptoms?"
+
+  utter_ask_image:
+    - text: "Could you please upload your chest X-ray image?"
+
+  utter_goodbye:
+    - text: "Goodbye! Take care of your health."
+
+  utter_thank:
+    - text: "Thank you for providing the information. We will analyze your data and get back to you soon."
+
+  utter_iamabot:
+    - text: "I am a bot, here to assist you with your lung health concerns."
+
+actions:
+  - action_check_symptoms
+  - action_analyze_image

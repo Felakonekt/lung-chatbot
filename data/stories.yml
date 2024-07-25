@@ -1,0 +1,23 @@
+version: "3.1"
+stories:
+  - story: greet path
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: symptom path
+    steps:
+      - intent: inform_symptoms
+      - action: action_check_symptoms
+      - action: utter_ask_image
+
+  - story: image path
+    steps:
+      - intent: provide_image
+      - action: action_analyze_image
+      - action: utter_thank
+
+  - story: goodbye path
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

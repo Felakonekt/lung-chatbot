@@ -1,0 +1,23 @@
+version: "3.1"
+rules:
+  - rule: Greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Ask for symptoms
+    steps:
+      - intent: inform_symptoms
+      - action: action_check_symptoms
+      - action: utter_ask_image
+
+  - rule: Analyze image
+    steps:
+      - intent: provide_image
+      - action: action_analyze_image
+      - action: utter_thank
+
+  - rule: Goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
